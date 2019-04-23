@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="templates/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h1>Install notes</h1>
+<ul>
+	<li>Extract the latest <a href="https://drive.google.com/open?id=0B7NgkR82X2W9eUJqeVk1Wi00cWM">php-test.zip</a> file to the htdocs directory.</li>
+	<li>The main thing you need to set up is the database installation. This is stored in the php/database/ directory, and is a copy of the <a href="https://dev.mysql.com/doc/employee/en/employees-installation.html">mysql employees sample database</a>.</li>
+	<li>To install the database run:</li>
+</ul>
+<pre class="code">cd path/to/htdocs/php/database<br />mysql -u root -h 127.0.0.1 &lt; employee.sql</pre>
+<ul>
+	<li>This will set up over 300k employee records &amp; associated other tables.</li>
+	<li>Copy the whole php-test directory to the desktop &amp; call it 'Test Backup'.</li>
+	<li>Back in htdocs/php-tests, delete the 'database' directory (be careful you are not deleting it from the directory on your desktop.</li>
+</ul>
+<h1>Preparing the machine for the test</h1>
+<ul>
+	<li>
+		<p>Open the code directory.</p>
+	</li>
+	<li>
+		<p>Open sublime text - ensure php files are set to open in sublime.</p>
+	</li>
+	<li>
+		<p>Open the web browser at <a href="http://localhost/php-test/Test%20Instructions.html">http://localhost/php-test/Test Instructions.html</a></p>
+	</li>
+	<li>
+		<p>Open another tab at <a href="http://localhost/php-test/test1.php">http://localhost/php-test/test1.php</a></p>
+	</li>
+	<li>
+		<p>Open another tab at <a href="http://localhost/phpmyadmin/">phpmyadmin on the local server</a>. Set the database to be the employee database.</p>
+	</li>
+</ul>
+<h1>After the test</h1>
+<ul>
+	<li>
+		<p>Zip all directories.</p>
+	</li>
+	<li>
+		<p>Name using the following format: Php Tests- &lt;date&gt; - &lt;interviewee name&gt;.zip</p>
+	</li>
+	<li>
+		<p>Upload the resulting file to an appropriate recruitment folder on Google Drive.</p>
+	</li>
+	<li>
+		<p>Once upload is successful, copy the zip file off onto a backup USB drive.</p>
+	</li>
+	<li>
+		<p>Delete all contents from htdocs/php-tests, and re-copy them from inside the backup folder on your desktop.</p>
+	</li>
+</ul>
+</body>
+</html>

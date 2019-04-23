@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="templates/styles.css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+      $(document).ready(function(event) {
+        $('.todo li').click(function(event) {
+          $(this).css('text-decoration', $(this).css('text-decoration').indexOf('none') === -1 ? '' : 'line-through');
+        });
+      });
+	</script>
+</head>
+<body>
+<h1 style="font-size: 80px;">Dash10 PHP Tests</h1>
+<h1>General notes</h1>
+<ul>
+	<li>You have two hours. Do whatever you can in this time.</li>
+	<li>You don't have to complete the tests in order. Complete the tests you feel most comfortable with. Obviously the more of your skill they demonstrate the better. The tests are grouped into categories to help you identify what type of topics are being focused on.</li>
+	<li>Feel free to use any libraries or other resources you want to help complete the tests</li>
+	<li>Manage your time carefully: that's part of the test. We would prefer something that works over something fancy.</li>
+	<li>If PHP isn't your preferred programming language let us know.</li>
+	<li>Mockups presented below are just that - mockups. You don't have to have your pages styled to look exactly the same (colors, fonts etc) - they just show the general layout of elements to include in your solution.</li>
+	<li>You will be provided access to a sample mysql database called 'employees' with a large amount of dummy data. This will be used in the various tests, and you can browse it using the <a href="http://localhost/phpmyadmin/" target="_blank">phpmyadmin</a> install on your machine.</li>
+	<li>To talk with the database, you don't need to worry about connections &amp; libraries. Simply call the function 'query', passing it sql and it execute your query. If it is a select statement it will return an array of associative arrays representing your query result.</li>
+	<li>In all tests, the follow things are assessed:
+		<ul>
+			<li>Accuracy of code - does the code do what is is supposed to.</li>
+			<li>How many of the tests you completed.</li>
+			<li>Elegance of algorithms - does the code work quickly and sensibly</li>
+			<li>Readability of code - pay attention to things like variable names, comments in your code, formatting and general code readability</li>
+			<li>You can click on any task to cross it out - this will help you keep track of what you have done & what remains to be done.</li>
+		</ul>
+	</li>
+</ul>
+<h1>Test 1</h1>
+<ol class="todo">
+	<li>In the file test1.php, in the section with the comment <strong>'SECTION 1'</strong>, create a form that resembles the mockup below.<br /><img class="mockup" src="images/mockup1.png" /></li>
+	<li>When submitted, search for that employee number in the employees table. If it is found, the edit form will be shown with the employee data loaded into it (mockup below). If it is not found, an error will show (as shown above).<br /><br /></li>
+	<li>When completing the edit form, verify using javascript that the data entered in the form is valid. If there is an error, show a helpful message and don't let the data be saved.</li>
+	<li>For extra points consider the usability of your user interfaces - javascript powered validation feedback &amp; interfaces with submissions over ajax (rather than page reloads on full form submission).<br /><img class="mockup" src="images/mockup2.png" /></li>
+	<li>Send the edit data to the PHP file 'test1-api.php'. This data should update the employee record in the database, and output a suitable success message. Hint: Consider security in this section.</li>
+</ol>
+<h1>Test 2 - SQL</h1>
+<p>For each of the following queries, retrieve the required data from the database &amp; output it in an HTML table</p>
+<ul>
+	<li>Output all tables onto the same page using the file test2.php.</li>
+	<li>Limit each query to the first 100 results.</li>
+	<li>The table will style automatically using the included CSS.</li>
+</ul>
+<p><strong>Queries:</strong></p>
+<ol class="todo">
+	<li>List all employees in the database who were have a birthday in March. Order by the youngest employees first.</li>
+	<li>Retrieve a list of all employees who ever spent time in the Customer Service or Finance departments. Sort the data by department &amp; then the first employees to serve in that department first.</li>
+	<li>Retrieve a details of all active employees as at 3rd March, 1988 - along with their salary &amp; current job title</li>
+	<li>Retrieve a list of all departments, the total number of employees that have ever worked in each department, and the date of birth of the youngest person ever to have worked in that department (just the date itself - we don't need any other information about the person).<br /><br /></li>
+</ol>
+<h1>Test 3 - Object Orientation</h1>
+<p>Create a MVC 'model' pattern class for an Employee that allows you to retrieve &amp; save an employee without writing SQL.</p>
+<ul class="todo">
+	<li>Open the file called test3.php</li>
+	<li>Create a class called 'employee'.</li>
+	<li>Add methods for retrieve and save that implement the method documentation.</li>
+	<li>To generate a new primary key for a new employee, call the global function generate_id()</li>
+	<li>When your class is complete - the function test() should execute successfully and output no errors. If all tests pass, it will output a success message.</li>
+</ul>
+<p><strong>Extra for experts:</strong></p>
+<ul class="todo">
+	<li>Create a static factory method called 'get' which receives an employee number, and returns a new Employee instance with that employee's details pre-populated.</li>
+</ul>
+</body>
+</html>
